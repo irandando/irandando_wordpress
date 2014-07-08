@@ -45,6 +45,7 @@ body {
   word-wrap: break-word;
   line-height: 1.7;
   font-size: 14px;
+  padding-top: 80px;
 }
 
 a {
@@ -319,8 +320,8 @@ textarea {
 }
 hr.section-divider {
   border-color: #E8E8E8;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /* =Singe Post/Page Pagination
@@ -613,6 +614,7 @@ li.recentcomments {
   margin-bottom: 0;
   margin-top: -2px;
   border-bottom: 1px solid #eee;
+  opacity: 30%;
 }
 .navbar-default .navbar-nav > li > a {
   color: #999;
@@ -622,6 +624,7 @@ li.recentcomments {
   color: #1FA67A;
   font-size: 24px;
   margin: 8px 0;
+
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -649,6 +652,7 @@ li.recentcomments {
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
   color: #fff;
   background-color: #1FA67A;
+  opacity: 
 }
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
   color: #999;
