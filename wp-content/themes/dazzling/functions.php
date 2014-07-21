@@ -40,7 +40,8 @@ function dazzling_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-  add_image_size( 'dazzling-featured', 730, 410, true );
+  add_image_size( 'dazzling-featured', 233, 233, true );
+  // add_image_size( 'mythumbnail', 200, 200);
 	add_image_size( 'tab-small', 60, 60 , true); // Small Thumbnail
 
 	// This theme uses wp_nav_menu() in one location.

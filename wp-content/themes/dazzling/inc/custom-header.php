@@ -28,8 +28,8 @@ function dazzling_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'dazzling_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 300,
-		'height'                 => 66,
+		'width'                  => 920,
+		'height'                 => 116,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'dazzling_header_style',
 		'admin-head-callback'    => 'dazzling_admin_header_style',

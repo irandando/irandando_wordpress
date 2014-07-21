@@ -5,9 +5,20 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header page-header">
+	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+		<p><a class="btn btn-default read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue reading', 'dazzling' ); ?> <i class="fa fa-chevron-right"></i></a></p>
+	</div><!-- .entry-summary -->
+	<?php else : ?>
+	<div class="entry-content">
 
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php if ( has_post_thumbnail()) : ?>
+		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+		 	<?php the_post_thumbnail( 'dazzling-featured', array( 'class' => 'thumbnail col-sm-4' )); ?>
+		</a>
+		<div class="col-sm-8">
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -31,21 +42,7 @@
 
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
 
-	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-		<p><a class="btn btn-default read-more" href="<?php the_permalink(); ?>"><?php _e( 'Continue reading', 'dazzling' ); ?> <i class="fa fa-chevron-right"></i></a></p>
-	</div><!-- .entry-summary -->
-	<?php else : ?>
-	<div class="entry-content">
-		
-		<?php if ( has_post_thumbnail()) : ?>
-		<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-		 	<?php the_post_thumbnail( 'dazzling-featured', array( 'class' => 'thumbnail col-sm-6' )); ?>
-		</a>
-		<div class="col-sm-6">
 			<?php the_excerpt(); ?>
 		</div> 
 		<?php else : ?>

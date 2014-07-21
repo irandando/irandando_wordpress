@@ -15,14 +15,14 @@
 		</div>
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="site-info container">
+			<div class="site-info container navbar-bottom-top">
 				<?php dazzling_social(); ?>
 				<nav role="navigation" class="col-md-6">
 					<?php dazzling_footer_links(); ?>
 				</nav>
 				<div class="copyright col-md-6">
 					<?php echo of_get_option( 'custom_footer_text', 'dazzling' ); ?>
-					<?php dazzling_footer_info(); ?>
+					<!-- <?php dazzling_footer_info(); ?> -->
 				</div>
 			</div><!-- .site-info -->
 			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
